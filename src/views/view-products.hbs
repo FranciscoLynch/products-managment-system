@@ -1,0 +1,41 @@
+<nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="/">Home</a></li>
+        <li class="breadcrumb-item active" aria-current="page">View product</li>
+    </ol>
+</nav>
+
+<div class="view-product p-5">
+    {{#each rows}}
+    <div class="row mb-5">
+        <div class="col text-center">
+            <h4><i class="bi bi-file-image"></i> image</h4>
+            <br><br>
+            <h3>{{this.brand}} {{this.indumentaryType}}</h3>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col">Brand</th>
+                        <th scope="col">Product</th>
+                        <th scope="col">Destination</th>
+                        <th scope="col">Price</th>
+                        <th scope="col">Stock</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">{{this.brand}}</th>
+                        <td>{{this.indumentaryType}}</td>
+                        <td>{{this.destination}}</td>
+                        <td>$ {{this.price}}</td>
+                        <td>{{this.stock}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        {{/each}}
+    </div>
